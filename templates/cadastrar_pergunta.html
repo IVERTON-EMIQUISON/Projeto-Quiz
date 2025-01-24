@@ -1,0 +1,15 @@
+<!-- quiz/templates/quiz/cadastrar_pergunta.html -->  
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Cadastrar Pergunta</title>  
+</head>  
+<body>  
+    <h1>Cadastrar Pergunta</h1>  
+    <form method="post">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button type="submit">Salvar Pergunta</button>  
+    </form>  
+</body>  
+</html>

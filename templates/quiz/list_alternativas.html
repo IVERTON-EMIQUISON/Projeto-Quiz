@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Alternativas</title>
+</head>
+<body>
+    <h1>Alternativas for Pergunta: {{ pergunta.texto }}</h1>
+    <ul>
+        {% for alternativa in alternativas %}
+            <li>{{ alternativa.texto }} - {% if alternativa.correta %}Correct{% else %}Incorrect{% endif %}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_alternativa' pergunta.id %}">Add Alternativa</a>
+    <a href="{% url 'list_perguntas' %}">Back to Perguntas</a>
+</body>
+</html>

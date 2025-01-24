@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Perguntas</title>
+</head>
+<body>
+    <h1>List of Perguntas</h1>
+    <ul>
+        {% for pergunta in perguntas %}
+            <li>{{ pergunta.texto }} - <a href="{% url 'list_alternativas' pergunta.id %}">View Alternativas</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_pergunta' %}">Create New Pergunta</a>
+</body>
+</html>

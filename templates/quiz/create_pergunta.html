@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Pergunta</title>
+</head>
+<body>
+    <h1>Create Pergunta</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'list_perguntas' %}">Back to List</a>
+</body>
+</html>
